@@ -10,8 +10,8 @@ TOMCAT_HTTP_URL=$(curl -s https://tomcat.apache.org/download-90.cgi | grep Core:
 TOMCAT_TAR_FILE=$(echo $TOMCAT_HTTP_URL | awk -F / '{print $NF}')
 TOMCAT_DIR_HOME=$(echo $TOMCAT_TAR_FILE | sed -e 's/.tar.gz//g')
 
-STUDENT_WAR=https://github.com/devops2k18/DevOpsDecember/raw/master/APPSTACK/student.war
-MYSQL_JAR_URL=https://github.com/devops2k18/DevOpsDecember/raw/master/APPSTACK/mysql-connector-java-5.1.40.jar
+STUDENT_WAR=https://github.com/devops090/StackScripts/blob/master/APPSTACK/student.war
+MYSQL_JAR_URL=https://github.com/devops090/StackScripts/blob/master/APPSTACK/mysql-connector-java-5.1.40.jar
 MYSQL_JAR=$(echo $MYSQL_JAR_URL | awk -F / '{print $NF}')
 
 G="\e[32m"
