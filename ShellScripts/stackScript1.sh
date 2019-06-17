@@ -18,8 +18,8 @@ TOMCAT_URL=$(curl -s https://tomcat.apache.org/download-90.cgi | grep Core -A 20
 TOMCAT_TAR=$(echo $TOMCAT_URL | awk -F / '{print $NF}')
 TOMCAT_DIR=$(echo $TOMCAT_TAR | sed -e 's/.tar.gz//g')
 
-STUDENT_WAR_URL=https://github.com/devops2k18/DevOpsDecember/raw/master/APPSTACK/student.war
-JDBC_URL=https://github.com/devops2k18/DevOpsDecember/raw/master/APPSTACK/mysql-connector-java-5.1.40.jar
+STUDENT_WAR_URL=https://github.com/devops090/StackScripts/blob/master/APPSTACK/student.war
+JDBC_URL=https://github.com/devops090/StackScripts/blob/master/APPSTACK/mysql-connector-java-5.1.40.jar
 JDBC_FILE=$(echo $JDBC_URL | awk -F / '{print $NF}')
 
 
