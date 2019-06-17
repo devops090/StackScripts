@@ -11,7 +11,7 @@ TOMCAT_URL=$(curl https://tomcat.apache.org/download-90.cgi | grep Core: -A 20 |
 TOMCAT_TAR_FILE=$(echo $TOMCAT_URL | awk -F / '{print $NF}')
 TOMCAT_DIR_HOME=$(echo $TOMCAT_TAR_FILE | sed -e 's/.tar.gz//g')
 
-JDBC_URL=https://github.com/devops2k18/DevOpsDecember/raw/master/APPSTACK/mysql-connector-java-5.1.40.jar
+JDBC_URL=https://github.com/devops090/StackScripts/blob/master/APPSTACK/mysql-connector-java-5.1.40.jar
 JDBC_DRIVER=$(echo $JDBC_URL | awk -F / '{print $NF}')
 
 R="\e[31m"
