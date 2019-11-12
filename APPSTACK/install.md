@@ -16,9 +16,9 @@
 # cd tomcat
 # cd webapps
 # rm -rf *
-# wget https://github.com/devops2k18/DevOpsDecember/raw/master/APPSTACK/student.war
+# wget https://github.com/devops090/StackScripts/raw/master/APPSTACK/student.war
 # cd ../lib
-# wget https://github.com/devops2k18/DevOpsDecember/raw/master/APPSTACK/mysql-connector-java-5.1.40.jar
+# wget https://github.com/devops090/StackScripts/raw/master/APPSTACK/mysql-connector-java-5.1.40.jar
 # cd ../bin
 # sh startup.sh
 ```
@@ -126,3 +126,27 @@ worker.tomcatA.port=8009
 
 
 --------------------
+
+#### Tomcat Issues:
+-------------------
+-------------------
+users.xml
+<role rolename="manager-gui,admin-gui,admin-script,manager-script,manager-jmx,manager-status"/>
+<user username="student" password="student" roles="manager-gui,admin-gui,admin-script,manager-script,manager-jmx,manager-status"/>
+
+server.xml
+<Engine name="../../webapps" defaultHost="localhost">
+
+<Host name="localhost"  appBase="webapps"
+            unpackWARs="true" autoDeploy="true"
+            workDir="/home/student/tomcat9/webapps">
+
+	
+<Context docBase="myWarName" path="/myWarName" reloadable="true" />
+
+
+
+ansible-playbook playbooks/01-ping.yaml -i inventory -u student -vvvv
+
+Thankyou
+satish N
